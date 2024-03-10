@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Поліклініка</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .menu-item {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .menu-item-underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #contact-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #009dff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <p class="menu-item">Головна</p>
+    <p class="menu-item">Послуги</p>
+    <p class="menu-item">Лікарі</p>
+    <p class="menu-item"><a href="#" class="menu-item-underline" onclick="openContactModal()">Про нас</a></p>
+    <p class="menu-item">Записатись</p>
+
+    <div id="contact-modal">
+        <p>Номер телефона: +380123456789</p>
+        <p>Email: podilclinic2@gmail.com</p>
+        <p>Адрес: Київ, вул. Фінансова, 999</p>
+        <button onclick="closeContactModal()">Закрити</button>
+    </div>
+
+    <p style="font-weight: bold; font-size: 3em; margin-bottom: 2px;">Поліклініка №2</p>
+    <p style="font-size: 1.5em; margin-bottom: 2px;">Подільського району міста Києва</p>
+    <i style="margin-bottom: 40px;">Запрошуємо містян зробити свій вклад в порятунок життя людей, які потребують компонентів донорської крові та долучитись до донорського руху.</i>
+    <p style="font-weight: bold; font-size: 2em; margin-top: 60px;">Структурні підрозділи</p>
+
+    <img src="IMG_1449.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="Dentist.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="Care.jpg" alt="Rectangle Photo" style="width: 30%; height: 236px;">
+
+    <img src="Ginecologist.jpg" alt="Rectangle Photo" style="width: 30%; height: 236px;">
+
+    <img src="Operation.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="dermatolog.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="Pediatr.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="large.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+    <img src="Careful.jpg" alt="Rectangle Photo" style="width: 30%; height: auto;">
+
+
+    <p style="font-weight: bold; font-size: 2em; margin-top: 60px;">Скільки лікарів залучено для консультації пацієнтів?</p>
+    <p style="font-weight: bold; font-size: 1.5em; margin-bottom: 5px;">100+</p>
+    <p>Професіоналів кожен день здійснюють профілактику потенційних захворювань та надають амбулаторні послуги нашим пацієнтам. Так, ми за останній місяць змогли проконсультувати більше 10 тисяч людей за січень цього року.</p>
+    <p style="font-weight: bold; font-size: 2em; margin-top: 60px;">Основні послуги нашої клініки</p>
+    <table>
+        <tr>
+            <th>Послуга</th>
+            <th>Підрозділ</th>
+            <th>Лікар</th>
+            <th>Ціна</th>
+        </tr>
+        <tr>
+            <td>Консультування</td>
+            <td>Хірургія</td>
+            <td>Бебех Ю. M.</td>
+            <td>550 ₴</td>
+        </tr>
+        <tr>
+            <td>Огляд</td>
+            <td>Стоматологія</td>
+            <td>Дадика Д. О.</td>
+            <td>400 ₴</td>
+        </tr>
+        <tr>
+            <td>УЗД</td>
+            <td>Кардіологія</td>
+            <td>Ламар Л. д.</td>
+            <td>600 ₴</td>
+        </tr>
+        <tr>
+            <td>Дерматоскопія</td>
+            <td>Дерматологія</td>
+            <td>Завадський А. Й.</td>
+            <td>300 ₴</td>
+        </tr>
+        <tr>
+            <td>Постановка ВМС</td>
+            <td>Гінекологія</td>
+            <td>Олійник А. В.</td>
+            <td>800 ₴</td>
+        </tr>
+    </table>
+    <p style="font-weight: bold; font-size: 2em; margin-top: 60px;">Акції дня</p>
+    <img src="unGNgO0B31voZsNWW10UTLebtf7ZG3xA0sjlZ0Sw_1200.jpg" alt="Rectangle Photo" style="width: 60%; height: auto;">
+    <ul style="list-style-type: disc;">
+        <li>Косультація судинного хірурга + УЗД (у період з 15.10.23 по 31.10.23 включно) - 890 ₴</li>
+        <li>Косультація психотерапевта (у період з 01.10.23 по 31.10.23 включно) - 700 ₴</li>
+        <li>Косультація дерматолога + аналізи (у період з 01.10.23 по 11.11.23 включно) - 1000 ₴</li>
+    </ul>
+    <script>
+        function openContactModal() {
+            var modal = document.getElementById("contact-modal");
+            modal.style.display = "block";
+        }
+
+        function closeContactModal() {
+            var modal = document.getElementById("contact-modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
+
